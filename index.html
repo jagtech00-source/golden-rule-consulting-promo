@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Rule Consulting | Chef Jeff Golden</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+        
+        :root {
+            --gold: #C5A26F;
+            --dark: #1A1A1A;
+            --cream: #F8F5F0;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+            background: var(--cream);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,0.85)), url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 20px 100px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(transparent, var(--cream));
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 3.8rem;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+        
+        .tagline {
+            font-size: 1.35rem;
+            font-weight: 400;
+            opacity: 0.95;
+            margin-bottom: 40px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.6rem;
+            margin-bottom: 24px;
+            color: var(--dark);
+        }
+        
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .exp-card {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--gold);
+        }
+        
+        .exp-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+        
+        .platform {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .platform h2 {
+            color: white;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-top: 50px;
+        }
+        
+        .feature {
+            background: rgba(255,255,255,0.08);
+            padding: 28px;
+            border-radius: 12px;
+        }
+        
+        .feature h4 {
+            color: var(--gold);
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+        
+        .cta {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 18px 48px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.15rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(197,162,111,0.35);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(197,162,111,0.45);
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--dark);
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <header class="hero">
+        <div class="container">
+            <div class="badge">40+ YEARS IN THE KITCHEN</div>
+            <h1>Chef Jeff Golden</h1>
+            <p class="tagline">Helping New York restaurants launch with confidence and clarity</p>
+            <a href="#consulting" class="btn">Work With Me</a>
+        </div>
+    </header>
+
+    <!-- Experience -->
+    <section class="section container">
+        <h2>Four Decades of Real-World Experience</h2>
+        <p style="max-width: 700px; font-size: 1.15rem; opacity: 0.85;">
+            From high-volume casino kitchens to running my own 16-seat diner, I've lived every side of the restaurant business.
+        </p>
+        
+        <div class="experience-grid">
+            <div class="exp-card">
+                <h3>Turning Stone Resort Casino</h3>
+                <p>High-volume, high-pressure kitchen operations at one of New York's largest gaming destinations.</p>
+            </div>
+            <div class="exp-card">
+                <h3>Colgate University</h3>
+                <p>Large-scale institutional dining — feeding thousands with consistency and quality.</p>
+            </div>
+            <div class="exp-card">
+                <h3>Golden's Food LLC</h3>
+                <p>Owner-operator of a beloved downtown Utica breakfast and lunch spot. I know what it takes to run the front and back of house.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform -->
+    <section class="platform section">
+        <div class="container">
+            <h2>The Golden Ticket Platform</h2>
+            <p style="max-width: 720px; font-size: 1.2rem; opacity: 0.9;">
+                A free, interactive tool built specifically for New York State restaurant owners. Get county-specific guidance, avoid costly mistakes, and launch faster.
+            </p>
+            
+            <div class="features">
+                <div class="feature">
+                    <h4>County-Specific Checklists</h4>
+                    <p>Permitting requirements tailored to your exact county — no more guessing.</p>
+                </div>
+                <div class="feature">
+                    <h4>Pre-Inspection Readiness Score</h4>
+                    <p>Know exactly where you stand before the health inspector walks in.</p>
+                </div>
+                <div class="feature">
+                    <h4>Timeline Tracker</h4>
+                    <p>Realistic permitting timelines so you can plan your opening with confidence.</p>
+                </div>
+                <div class="feature">
+                    <h4>Operational Playbooks</h4>
+                    <p>Proven systems for menu, inventory, staffing, and daily operations.</p>
+                </div>
+                <div class="feature">
+                    <h4>Pitfall Alerts</h4>
+                    <p>Common (and expensive) mistakes most new owners make — and how to avoid them.</p>
+                </div>
+                <div class="feature">
+                    <h4>Foraged & Local Focus</h4>
+                    <p>Built by a chef who values quality ingredients and sustainable practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section container" style="text-align: center;">
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">40+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Major NY Venues</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">16</div>
+                <div class="stat-label">Seat Diner Owner</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="consulting" class="cta">
+        <div class="container">
+            <h2 style="margin-bottom: 16px;">Ready to Launch Your Restaurant the Right Way?</h2>
+            <p style="max-width: 620px; margin: 0 auto 40px; font-size: 1.15rem; opacity: 0.85;">
+                Start with the free Golden Ticket platform, then book a strategy session with Chef Jeff for personalized guidance.
+            </p>
+            <a href="https://github.com/jagtech00-source/golden-rule-consulting-promo" class="btn">Get Started Free</a>
+            <p style="margin-top: 30px; font-size: 0.95rem; opacity: 0.7;">
+                Or email Chef Jeff directly to discuss consulting options.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Golden Rule Consulting • Chef Jeff Golden • Utica, New York</p>
+        <p style="margin-top: 8px;">Helping New York restaurants succeed from day one.</p>
+    </footer>
+</body>
+</html>
